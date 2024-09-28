@@ -31,6 +31,7 @@ A bastion host, situated on a public network and designed to withstand malicious
 A firewall inspects incoming and outgoing traffic using predefined rules, thereby enhancing server security by controlling traffic flow. Linux system administrators utilize iptables, an interface to the netfilter firewall, to accept or reject packets and safeguard systems from attacks. With iptables, administrators can define rules to permit incoming SSH traffic from trusted sources based on IP address, port, or protocol and track recent SSH port connections. Additionally, they can employ rate-limiting techniques to block IP addresses based on connection frequency, effectively reducing the risk of SSH attacks. Implementing firewall configurations, such as port knocking, further strengthens security by making it challenging to detect open SSH ports (Blake, 2022).</br>
 <h3>Remote Desktop Protocol Control Implementation and Testing</h3>
 <h4>RDP Findings</h4>
+![Creating a user with computer management](https://github.com/user-attachments/assets/77777fb9-ab2e-4eb1-bc5d-a55d83ab51e1)
 
 <!--
  ```diff
