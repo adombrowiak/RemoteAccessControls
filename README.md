@@ -6,7 +6,7 @@
 Exploring built-in protective controls inside the Windows OS and Linux OS.
 
 
-<h2>Languages and Utilities Used</h2>
+<h2>Tools Utilized</h2>
 
 - <b>Computer Management</b> 
 - <b>Remote Desktop Connection</b>
@@ -18,36 +18,19 @@ Exploring built-in protective controls inside the Windows OS and Linux OS.
 - <b>Windows 10</b>
 - <b>Kali Linux</b>
 
-<h2>Program walk-through:</h2>
-
-<p align="center">
-Launch the utility: <br/>
-<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Select the disk:  <br/>
-<img src="https://i.imgur.com/tcTyMUE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Enter the number of passes: <br/>
-<img src="https://i.imgur.com/nCIbXbg.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Confirm your selection:  <br/>
-<img src="https://i.imgur.com/cdFHBiU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Wait for process to complete (may take some time):  <br/>
-<img src="https://i.imgur.com/JL945Ga.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Sanitization complete:  <br/>
-<img src="https://i.imgur.com/K71yaM2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Observe the wiped disk:  <br/>
-<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
+<h2>Project Documentation</h2>
+<h3>Remote Desktop Protocol Best Practices</h3>
+To safeguard against ongoing risks, organizations should prioritize understanding RDP functionality and adopting best practices for its security. These practices include enforcing strong passwords, implementing two-factor authentication, and enabling account lockout policies to thwart brute-force attacks. Additionally, it's crucial to regularly update RDP software and prioritize patching known vulnerabilities with public exploits (Cobb, 2020).</br>
+Cost-effective measures such as changing the default RDP port, restricting access to trusted IP addresses, and utilizing VPNs for secure remote access are recommended. Monitoring RDP usage for abnormal behavior, enforcing the principle of least privilege, and using an RDP gateway server for centralized management are further steps to enhance security. Finally, organizations should never expose RDP directly to the internet and regularly scan for any exposed instances, even on non-Microsoft operating systems, to ensure comprehensive protection against potential threats (Cobb, 2020).
+</br>
+<h3>Secure Shell Best Practices</h3>
+Five SSH best practices to enhance security in remote access environments are configuring second-factor authentication, changing the default options, authenticating clients using SSH certificates, using a bastion host, and implementing firewalls. 
+Configuring second-factor authentication requires two forms of authentication, like a passphrase and a one-time password. While vulnerable to MITM attacks, any second factor enhances security, with options like YubiKey and Apple TouchID being safer. Enabling 2FA for SSH ensures users need more than one credential, boosting security against theft. Given SSH's common use for secure remote connections, setting up 2FA is crucial for comprehensive protection (Blake, 2022).</br>
+	In SSH configuration (/etc/ssh/sshd_config), changing defaults is key for security. Alter the port from 22 to deter attackers and disable root login to limit system access. Shift from password-based to SSH key authentication for better security, and consider SSH certificates for stronger identity verification. Use "AllowUsers" to control SSH access and configure certificate-based authentication via SSH-keygen for enhanced security (Blake, 2022).</br>
+A bastion host, situated on a public network and designed to withstand malicious traffic, serves as the initial point of contact before the firewall, shielding systems behind it. Typically hosting a single application and limited services to minimize risk, bastion hosts are widely known online, making their security paramount. Establishing a bastion host can enhance system security, especially in SSH connections (Blake, 2022).</br>
+A firewall inspects incoming and outgoing traffic using predefined rules, thereby enhancing server security by controlling traffic flow. Linux system administrators utilize iptables, an interface to the netfilter firewall, to accept or reject packets and safeguard systems from attacks. With iptables, administrators can define rules to permit incoming SSH traffic from trusted sources based on IP address, port, or protocol and track recent SSH port connections. Additionally, they can employ rate-limiting techniques to block IP addresses based on connection frequency, effectively reducing the risk of SSH attacks. Implementing firewall configurations, such as port knocking, further strengthens security by making it challenging to detect open SSH ports (Blake, 2022).</br>
+<h3>Remote Desktop Protocol Control Implementation and Testing</h3>
+<h4>RDP Findings</h4>
 
 <!--
  ```diff
